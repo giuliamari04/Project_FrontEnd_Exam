@@ -1,0 +1,25 @@
+.container-animals{
+    min-height:90vh;
+    padding-top:8%;
+    background-color: var(--color-green-4);
+    margin: auto;
+    border:none;
+    width: 60%;
+    color: black;
+}
+.debug{
+    background:red;
+}
+
+.image-animal img{
+    border-radius:20px;
+    overflow:hidden;
+}
+@media (max-width: 998px) {
+.container-animals{
+   flex-wrap:wrap;
+   padding:6rem 2rem;
+   width:90%
+}
+
+}

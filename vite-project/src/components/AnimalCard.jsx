@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../assets/styles/Card.css";
 import Modal from "../components/Modal";
+import { Link } from "react-router";
 import ModalCards from "../components/ModalCards";
 
 const loggedUser = JSON.parse(localStorage.getItem("loggedUser")) || null; //estrae user loggato
@@ -23,12 +24,12 @@ function AnimalCard({
 
   //gestione modale login/cards
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isModalCardOpen, setIsModalCardOpen] = useState(false);
+  // const [isModalCardOpen, setIsModalCardOpen] = useState(false);
   
   //modale login
-  const handleModalcard = () => {
-    setIsModalCardOpen(true);
-  };
+  // const handleModalcard = () => {
+  //   setIsModalCardOpen(true);
+  // };
   const handleLike = () => {
     if (!loggedUser) {
       setIsModalOpen(true);
@@ -84,7 +85,13 @@ function AnimalCard({
           <span className="font-bold"> Breed</span>
           <br /> {breed}
         </p>
-        <button className="btn-info my-4" onClick={handleModalcard}>
+         <Link to={`/animal/${animal.id}`}
+         state={{animal, type}}>
+       <button className="btn-info my-4">
+          read more →
+        </button>
+      </Link>
+        {/* <button className="btn-info my-4" onClick={handleModalcard}>
           read more →
         </button>
         {isModalCardOpen && (
@@ -93,7 +100,7 @@ function AnimalCard({
             type={type}
             onClose={() => setIsModalCardOpen(false)}
           />
-        )}
+        )} */}
       </div>
 
       {/* absolute */}

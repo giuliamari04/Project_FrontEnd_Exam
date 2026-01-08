@@ -9,6 +9,7 @@ import Footer from "./components/Footer"
 import User from "./pages/User"
 import Donate from "./pages/Donation"
 import Login from "./pages/Login"
+import AnimalDetail from "./pages/AnimalDetail";
 
 import { useEffect } from "react";
 
@@ -46,6 +47,7 @@ function App() {
       <Route path='/login' element={<Login/>}/>
       <Route path='/user' element={<User/>}></Route>
       <Route path='/donate' element={<Donate/>}></Route>
+       <Route path="/animal/:id" element={<AnimalDetail />} />
 
     </Routes>
     <Footer/>
