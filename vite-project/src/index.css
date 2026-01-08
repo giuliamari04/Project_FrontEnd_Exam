@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --color-green-1:#004b23;
+  --color-green-2:#006400;
+  --color-green-3:#007200;
+  --color-green-4:#008000;
+  --color-green-5:#38b000;
+  --color-green-6:#70e000;
+  --color-green-7:#9ef01a;
+  --color-green-8:#ccff33;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-green-8);
+}
+
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
