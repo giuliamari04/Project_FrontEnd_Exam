@@ -1,0 +1,96 @@
+body {
+  background-image: url("../images/bg3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+
+  color: #333;
+}
+.container-home {
+  width: 99vw;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero {
+  text-align: start;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  z-index: 5;
+}
+h1 {
+  color: var(--color-green-2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+.my-btn {
+  padding: 10px;
+  background-color: var(--color-green-5);
+  border-radius: 10px;
+  color: whitesmoke;
+}
+.dog-image {
+  position: absolute;
+  left: 5%;
+  bottom: 2%;
+}
+.cat-image {
+  position: absolute;
+  right: 10%;
+  bottom: 2%;
+}
+
+/* media query mobile */
+@media (max-width: 768px) {
+
+  body {
+    background-position: center top;
+  }
+
+  .container-home {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 7rem 1rem;
+    text-align: center;
+  }
+
+  .hero {
+    text-align: center;
+    align-items: center;
+    z-index: 5;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem; /* da text-6xl */
+  }
+
+  .hero h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .my-btn {
+    display: inline-block;
+    width: 100%;
+     text-align: center;
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  /* Nascondiamo le immagini decorative su mobile */
+  .dog-image,
+  .cat-image {
+    display: none;
+  }
+}

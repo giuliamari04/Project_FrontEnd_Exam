@@ -1,0 +1,23 @@
+body{
+  background-color: #f9f9f9;
+}
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* css footer */
+#footer{
+  background-color:var(--color-green-1);
+  display:flex;
+  color:whitesmoke;
+  justify-content:center;
+  align-items:center;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
