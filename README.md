@@ -16,6 +16,7 @@ This project was developed as part of a **Frontend Development Exam**.
 - Like and unlike animals with a heart button when user logged
 - User login and registration system using `localStorage`
 - Personal profile page with a list of liked animals
+- Make a fake donation for the shelter
 - Role-based access:
   - **User**: can see and manage only their own likes
   - **Admin**: can view all users and all liked animals by other users

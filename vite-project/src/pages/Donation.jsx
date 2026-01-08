@@ -38,7 +38,7 @@ function Donation() {
   };
 
   return (
-    <section className="container-home">
+    <section className="container-home pt-14">
       <div className={`${loggedUser ? "block" : "hidden"} w-75`}>
         <form onSubmit={handleDonation} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <div className="mb-4">
@@ -100,7 +100,7 @@ function Donation() {
           <div className="flex items-center justify-between">
             <button
               type="submit"
-              className="bg-green-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
               Donate
             </button>
