@@ -1,0 +1,48 @@
+@import "../../index.css";
+nav {
+  background-color: var(--color-green-1);
+  color: white;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.nav-list li {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.debug {
+  border: 2px dashed red;
+}
+
+
+/* media query mobile */
+@media (max-width: 768px) {
+.nav-list li {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.my-bg-toggle{
+  background-color:var(--color-green-3);
+  color:white;
+}
+.bg-mini{
+  background-color: var(--color-green-4);
+}
+ul{
+  margin:0;
+}
+
+}
