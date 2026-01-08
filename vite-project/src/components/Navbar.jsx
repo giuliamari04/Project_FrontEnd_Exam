@@ -105,7 +105,7 @@ function Navbar() {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/donate"
                   className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded"
                 >
                   Donate

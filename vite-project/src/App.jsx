@@ -7,6 +7,7 @@ import Register from "./pages/Register"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import User from "./pages/User"
+import Donate from "./pages/Donation"
 import Login from "./pages/Login"
 
 import { useEffect } from "react";
@@ -44,6 +45,8 @@ function App() {
       <Route path='/register' element={<Register/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/user' element={<User/>}></Route>
+      <Route path='/donate' element={<Donate/>}></Route>
+
     </Routes>
     <Footer/>
     </BrowserRouter>

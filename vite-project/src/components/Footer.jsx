@@ -15,7 +15,7 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/" className="hover:underline me-4 md:me-6">
+              <Link to="/donate" className="hover:underline me-4 md:me-6">
                 Donate
               </Link>
             </li>
