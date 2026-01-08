@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import dogsReducer from "./features/dogSlice";
-import catReducer from "./features/catSlice";
+import dogsReducer from "./features/dogs/reducer";
+import catReducer from "./features/cats/reducer";
 
-export const store = configureStore({
+const store = configureStore({
   reducer: {
     dogs: dogsReducer,
-    cats:catReducer,
-  },
+    cats: catReducer
+  }
 });
+
+export default store

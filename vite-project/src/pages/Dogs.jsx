@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchDogs, setFilteredDogs } from "../features/dogSlice";
+// import { fetchDogs, setFilteredDogs } from "../features/dogSlice";
+import fetchDogsAction  from "../features/dogs/action";
+import {setFilteredDogs} from "../features/dogs/action"
 import AnimalCard from "../components/AnimalCard";
 import AnimalFilter from "../components/AnimalFilter";
 import Loader from "../components/Loader";
@@ -9,14 +11,17 @@ const ITEMS_PER_PAGE = 4;
 
 function Dogs() {
   const dispatch = useDispatch();
-  const { allDogs, filteredDogs, loading, error } = useSelector(state => state.dogs);
+  const { allDogs,filteredDogs =[], loading, error } = useSelector(state => state.dogs);
   const [page, setPage] = useState(1);
   const [size, setSize] = useState("");
   const [genderSelect, setGender] = useState("");
 
   useEffect(() => {
-    if (allDogs.length === 0) dispatch(fetchDogs());
-  }, [dispatch, allDogs.length]);
+    if (!allDogs || allDogs.length === 0) {
+      dispatch(fetchDogsAction());
+    }
+  }, [dispatch, allDogs]);
+
 
   // filtro locale
   useEffect(() => {
@@ -43,9 +48,9 @@ function Dogs() {
     // setPage(1);
   }, [size, genderSelect, allDogs, dispatch]);
 
-  const startIndex = (page - 1) * ITEMS_PER_PAGE;
-  const pagedDogs = filteredDogs.slice(startIndex, startIndex + ITEMS_PER_PAGE);
-  const totalPages = Math.ceil(filteredDogs.length / ITEMS_PER_PAGE);
+    const startIndex = (page - 1) * ITEMS_PER_PAGE;
+  const pagedDogs = (filteredDogs || []).slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const totalPages = Math.ceil((filteredDogs || []).length / ITEMS_PER_PAGE);
 
   // if (loading) return <Loader />;
   if (error) return <p>{error}</p>;
