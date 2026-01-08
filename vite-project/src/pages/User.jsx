@@ -33,8 +33,7 @@ function User() {
 
     const updatedUsers = registeredUsers.filter((user) => user.email !== email);
     localStorage.setItem("registeredUser", JSON.stringify(updatedUsers));
-    // Se stai visualizzando la pagina senza reload, puoi forzare il refresh dei dati:
-    window.location.reload(); // oppure usare uno stato React per aggiornare l'UI
+    window.location.reload(); 
   };
 
   const handleLogout = () => {
