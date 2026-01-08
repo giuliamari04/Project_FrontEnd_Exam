@@ -2,6 +2,7 @@ import "../assets/styles/User.css";
 import AnimalCard from "../components/AnimalCard";
 import { useState } from "react";
 import Modal from "../components/Modal";
+import AddAnimalForm from "../components/AddAnimalForm";
 
 function User() {
   const registeredUsers =
@@ -70,16 +71,18 @@ function User() {
           <div className="container-cards">
             <div className="flex flex-wrap">
               {likedAnimal.map((likes) => (
-                <div key={likes.id_animal} className="m-2 my-cards">
+                <div className="m-2 my-cards">
                   <AnimalCard
-                    key={likes.id}
-                    id={likes.id}
+                    key={likes.id_animal}
+                    id={likes.id_animal}
                     name={likes.name}
                     gender={likes.gender}
                     breed={likes.breed}
                     temperament={likes.temperament}
                     image={likes.image}
                     like_btn=""
+                    animal={likes}
+                    type="none"
                   />
                 </div>
               ))}
@@ -161,6 +164,10 @@ function User() {
         </button>
       </div>
 
+      {/* animalform */}
+      <div>
+        <AddAnimalForm/>
+      </div>
       {isModalOpen && (
   <Modal
     message="Are you sure that you want to delete your account?"

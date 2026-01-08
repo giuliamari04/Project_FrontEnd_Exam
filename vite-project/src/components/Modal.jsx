@@ -7,9 +7,9 @@ function Modal({ message, onClose, onConfirm, showConfirm = false }) {
         <span className="close" onClick={onClose}>
           &times;
         </span>
-        <h3 className="text-2xl font-bold">Attention!</h3>
+        <h3 className="text-2xl font-bold">Notification</h3>
 
-        <p>{message}</p>
+        <div>{message}</div>
 
         {showConfirm && (
           <div className="modal-actions">

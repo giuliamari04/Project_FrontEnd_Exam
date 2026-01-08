@@ -47,7 +47,7 @@ function App() {
       <Route path='/login' element={<Login/>}/>
       <Route path='/user' element={<User/>}></Route>
       <Route path='/donate' element={<Donate/>}></Route>
-       <Route path="/animal/:id" element={<AnimalDetail />} />
+      <Route path="/animal/:id" element={<AnimalDetail />} />
 
     </Routes>
     <Footer/>

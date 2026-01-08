@@ -22,14 +22,9 @@ function AnimalCard({
     JSON.parse(localStorage.getItem("likes")) || []
   );
 
-  //gestione modale login/cards
+  //gestione modale login
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // const [isModalCardOpen, setIsModalCardOpen] = useState(false);
   
-  //modale login
-  // const handleModalcard = () => {
-  //   setIsModalCardOpen(true);
-  // };
   const handleLike = () => {
     if (!loggedUser) {
       setIsModalOpen(true);
@@ -86,21 +81,11 @@ function AnimalCard({
           <br /> {breed}
         </p>
          <Link to={`/animal/${animal.id}`}
-         state={{animal, type}}>
+         state={{animal, type}} className={`${type ==="none"?"hidden":"block"}`}>
        <button className="btn-info my-4">
           read more →
         </button>
       </Link>
-        {/* <button className="btn-info my-4" onClick={handleModalcard}>
-          read more →
-        </button>
-        {isModalCardOpen && (
-          <ModalCards
-            animal={animal}
-            type={type}
-            onClose={() => setIsModalCardOpen(false)}
-          />
-        )} */}
       </div>
 
       {/* absolute */}
