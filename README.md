@@ -37,7 +37,6 @@ This project was developed as part of a **Frontend Development Exam**.
 - **localStorage** for authentication and data persistence
 - **redux** to manage and share the dogs and cats data globally between components, avoiding prop drilling and ensuring better state consistency.
 
-I decided to use Redux Toolkit instead of classic Redux because it greatly simplifies state management. In particular, for this project with asynchronous fetches, slices, and dynamic filters, Toolkit allows the use of createSlice and createAsyncThunk, which automate many repetitive operations like actions and reducers, improving code maintainability.
 ---
 
 ## 💻 How to Run the Project
